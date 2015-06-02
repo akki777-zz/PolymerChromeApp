@@ -1,0 +1,108 @@
+<!DOCTYPE html><html><head><title>My First Chrome App</title>
+  
+    <!-- 1. Load platform support before any code that touches the DOM. -->
+    <script src="bower_components/webcomponentsjs/webcomponents.min.js"></script>
+    <link rel="import" href="bower_components/core-elements/core-elements.html">
+    <link rel="import" href="bower_components/paper-elements/paper-elements.html">
+    <link rel="import" href="bower_components/core-icons/social-icons.html">
+    
+    <!-- importing custom element html -->
+    <link rel="import" href="elements/nickname.html">
+    
+    <!--Adding Styles-->
+    <style>
+      
+      core-toolbar {
+        background-color: #0099cc;
+        color: white;
+        font-size: 25px;
+      }
+      
+      paper-tabs {
+        color: yellow;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      
+      paper-fab {
+        z-index: 1;         /*always on top*/
+        position: absolute; /*fixed position* at bottom*/ 
+        bottom: 25px;
+        right: 25px;
+        background: #FF6000;
+      }
+      
+      core-icon[icon="social:notifications"] {
+          height: 50px;
+          color: #ee1166;
+      }
+      
+      core-image {
+        top: 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+      }
+      
+      #username {
+        position: absolute;
+        top: 75px;
+        left: 10px;
+      }
+     
+     #drawerBack {
+       background-color: #fafafa;
+        box-shadow: 0px 0px 4px #888888;
+     }
+     #drawerTool {
+       background: #98bf21;
+     }
+      
+    </style>
+  </head>
+  <body fullbleed="" layout="" vertical="">
+    
+    <!--custom element - Material dialog box for Input of Nickname -->
+        <nick-name id="nickname"></nick-name>
+        
+    <!--FAB-->
+        <paper-fab id="paper-fab-notify" icon="social:notifications"></paper-fab>    
+    
+    <core-drawer-panel>
+      
+      <!--Drawer-->
+      <core-header-panel drawer="" id="drawerBack" mode="seamed">
+        
+        <core-toolbar id="drawerTool" class="medium-tall">
+          <core-image src="avatar.svg"></core-image>
+          <core-label id="username">Hello User</core-label>
+        </core-toolbar>
+        
+      </core-header-panel>
+        
+      <core-header-panel main="">
+        
+        <core-toolbar class="medium-tall">
+          <core-icon-button icon="menu" core-drawer-toggle=""></core-icon-button>
+          <div>Polymer  Chrome  App</div>
+          <paper-tabs selected="0" class="bottom fit" alignbottom="true" nobar="true">
+            <paper-tab>APPS</paper-tab>
+            <paper-tab>GAMES</paper-tab>
+            <paper-tab>MUSIC</paper-tab>
+          </paper-tabs>
+        </core-toolbar>
+        
+        
+        
+        <!--Main body Content-->
+          <h1>Wow Akshay</h1>
+          <core-icon icon="social:notifications"></core-icon>
+          
+        </core-header-panel>
+        
+      
+    </core-drawer-panel>
+    
+    <script src="notify.js"></script>
+
+</body></html>

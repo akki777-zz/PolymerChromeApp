@@ -1,0 +1,13 @@
+{
+  "name": "Polymer Chrome App",
+  "description": "My first Chrome App.",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "app": {
+    "background": {
+      "scripts": ["background.js"]
+    }
+  },
+  "icons": { "16": "chat16.png", "128": "chat128.png" },
+  "csp": "script-src 'self' 'unsafe-inline'; object-src 'self'"
+}

@@ -1,0 +1,18 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+<polymer-element name="nick-name" attributes="name">
+  
+  <template>
+   
+     <!--Dialog Box-->
+        <paper-action-dialog id="msg_dialog" heading="Hey there.." style="color: #3f51b5;" transition="core-transition-center" backdrop="true" opened="true">
+          <paper-input label="What's ur nickname ?" floatingLabel="true" id="inputName" value="{{name}}"></paper-input>
+          <paper-button affirmative style="color: #3f51b5;" on-click="{{changeName}}">Submit</paper-button>
+        </paper-action-dialog>
+        
+  </template>
+  
+  <script src="nickname.js"></script>
+  
+</polymer-element>
