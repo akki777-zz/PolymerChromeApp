@@ -1,0 +1,24 @@
+<html><head>
+  <link rel="import" href="../bower_components/polymer/polymer.html">
+
+
+</head><body>
+<polymer-element name="first-tab" attributes="name">
+  <template>
+    <style>
+      h1 {
+       font-family: sans-serif;
+       text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+      }
+    </style>
+
+      <h1>Hello {{name}} , Welcome to Polymer #0.5 !!</h1>
+     
+    <input type="text" value="{{name}}">
+    <paper-input label="Enter your name" value="{{name}}" floatinglabel="true"></paper-input>
+    <input type="button" on-click="{{changeName}}" value="Change Name">
+    <paper-button noink="" on-click="{{changeName}}">Change Name</paper-button>
+  </template>
+  <script src="first-tab.js"></script>
+</polymer-element>
+</body></html>

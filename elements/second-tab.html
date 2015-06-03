@@ -1,0 +1,93 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="second-tab">
+  <template>
+    <style>
+      .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: row;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    
+      
+      .child {
+        align-self: center;
+        padding: 25px;
+      }
+      
+      #circle-shadow {
+        display: inline-block;
+      }
+      #circle {
+        height: 100px;
+        width: 100px;
+        position: relative;
+      }
+      
+      
+      /*red*/      
+      #red::shadow #sliderBar::shadow #activeProgress {
+        background-color: #e51c23;
+      }
+      #red::shadow #sliderKnobInner {
+        background-color: #e51c23;
+      }
+      #red::shadow #sliderKnobInner::before {
+        background-color: #e51c23;
+      }
+      /*green*/
+      #green::shadow #sliderBar::shadow #activeProgress {
+        background-color: #259b24;
+      }
+      #green::shadow #sliderKnobInner {
+        background-color: #259b24;
+      }
+      #green::shadow #sliderKnobInner::before {
+        background-color: #259b24;
+      }
+      /*blue*/
+      #blue::shadow #sliderBar::shadow #activeProgress {
+        background-color: #5677fc;
+      }
+      #blue::shadow #sliderKnobInner {
+        background-color: #5677fc;
+      }
+      #blue::shadow #sliderKnobInner::before {
+        background-color: #5677fc;
+      }
+    </style>
+    
+    <!--tab content-->
+    
+    <div class="container">
+      
+      <div class="child">
+        <paper-shadow  id="circle-shadow" z="3">
+          <div id="circle">
+            <paper-ripple fit></paper-ripple>
+          </div>
+        </paper-shadow>
+      </div>    
+    
+    <div class="child">
+      <core-label>shadow<br><paper-slider min="0" max="5" value="1" snaps="true" pin="true"></paper-slider></core-label>
+      
+      <core-label>red<br><paper-slider id="red" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
+      
+      <core-label>green<br><paper-slider id="green" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
+      
+      <core-label>blue<br><paper-slider id="blue" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
+    </div>
+    
+    </div>
+    
+    
+  </template>
+  
+  <script src="second-tab.js"></script>
+</polymer-element>

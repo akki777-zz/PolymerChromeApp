@@ -8,6 +8,8 @@
     
     <!-- importing custom element html -->
     <link rel="import" href="elements/nickname.html">
+    <link rel="import" href="elements/first-tab.html"> 
+    <link rel="import" href="elements/second-tab.html">
     
     <!--Adding Styles-->
     <style>
@@ -51,7 +53,7 @@
       }
      
      #drawerBack {
-       background-color: #fafafa;
+       background-color: #f2f2f2;
         box-shadow: 0px 0px 4px #888888;
      }
      #drawerTool {
@@ -80,7 +82,7 @@
         
       </core-header-panel>
         
-      <core-header-panel main="">
+      <core-header-panel main="" style="background-color: #f2f2f2;">
         
         <core-toolbar class="medium-tall">
           <core-icon-button icon="menu" core-drawer-toggle=""></core-icon-button>
@@ -90,13 +92,18 @@
             <paper-tab>GAMES</paper-tab>
             <paper-tab>MUSIC</paper-tab>
           </paper-tabs>
+  
         </core-toolbar>
         
         
         
         <!--Main body Content-->
-          <h1>Wow Akshay</h1>
-          <core-icon icon="social:notifications"></core-icon>
+        <core-pages selected="0">
+          <div>page1</div>
+          <div><second-tab></second-tab></div>
+          <div>page3</div>
+        </core-pages>
+          
           
         </core-header-panel>
         

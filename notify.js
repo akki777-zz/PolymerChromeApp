@@ -1,3 +1,10 @@
+var tabs = document.querySelector('paper-tabs');
+var pages = document.querySelector('core-pages');
+
+tabs.addEventListener('core-select',function(){
+  pages.selected = tabs.selected;
+});
+
 document.getElementById("paper-fab-notify").addEventListener("click", function(){
 
               if (!Notification) {
