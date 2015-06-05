@@ -1,6 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 
-<polymer-element name="second-tab">
+<polymer-element name="second-tab" attributes='hr hg hb z inputVal'>
   <template>
     <style>
       .container {
@@ -20,17 +20,18 @@
         padding: 25px;
       }
       
-      #circle-shadow {
+      #boxShadow {
         display: inline-block;
       }
-      #circle {
-        height: 100px;
-        width: 100px;
+      #box {
+        height: 130px;
+        width: 130px;
         position: relative;
+        background-color: #808080;
       }
       
       
-      /*red*/      
+      /*red*/  
       #red::shadow #sliderBar::shadow #activeProgress {
         background-color: #e51c23;
       }
@@ -64,25 +65,36 @@
     
     <!--tab content-->
     
+    
+    
     <div class="container">
       
       <div class="child">
-        <paper-shadow  id="circle-shadow" z="3">
-          <div id="circle">
-            <paper-ripple fit></paper-ripple>
-          </div>
-        </paper-shadow>
-      </div>    
+        <div>
+          <paper-shadow  id="boxShadow" z="3" animated>
+            <div id="box">
+              <paper-ripple fit></paper-ripple>
+            </div>
+          </paper-shadow>
+        </div>
+        
+        <div style="display:inline-block;margin-top: 10px;width:150px;">
+          <paper-input id="hexColor" label="Enter hex value..." value="{{inputVal}}" style="padding-left: 20px;width:52px;"></paper-input>
+          <paper-button on-click="{{invoke}}">Try</paper-button>
+        </div>
+      </div>
     
-    <div class="child">
-      <core-label>shadow<br><paper-slider min="0" max="5" value="1" snaps="true" pin="true"></paper-slider></core-label>
-      
-      <core-label>red<br><paper-slider id="red" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
-      
-      <core-label>green<br><paper-slider id="green" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
-      
-      <core-label>blue<br><paper-slider id="blue" min="0" max="255" value="128" pin="true"></paper-slider></core-label>
-    </div>
+      <div class="child">
+        <br><core-label>shadow<br>
+            <paper-slider id="zSlider" min="0" max="5" value="{{z}}" snaps="true" pin="true" editable="true"></paper-slider>
+        </core-label>
+        
+        <br><core-label>red<br><paper-slider id="red" min="0" max="255" value="{{hr}}" pin="true" editable="true"></paper-slider></core-label>
+        
+        <br><core-label>green<br><paper-slider id="green" min="0" max="255" value="{{hg}}" pin="true" editable="true"></paper-slider></core-label>
+        
+        <br><core-label>blue<br><paper-slider id="blue" min="0" max="255" value="{{hb}}" pin="true" editable="true"></paper-slider></core-label>
+      </div>
     
     </div>
     

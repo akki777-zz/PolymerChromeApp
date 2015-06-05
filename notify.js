@@ -1,8 +1,18 @@
 var tabs = document.querySelector('paper-tabs');
-var pages = document.querySelector('core-pages');
+var pages = document.querySelector('core-animated-pages');
 
 tabs.addEventListener('core-select',function(){
   pages.selected = tabs.selected;
+});
+
+document.addEventListener('polymer-ready', function() {
+        var box = document.getElementById('second');
+        box.addEventListener('shadow-z-changed', function() {
+          console.log('height='+box.z);
+        });
+        box.addEventListener('color-changed', function() {
+          console.log('color='+box.hex);
+        });
 });
 
 document.getElementById("paper-fab-notify").addEventListener("click", function(){
