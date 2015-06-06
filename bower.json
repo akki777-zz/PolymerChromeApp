@@ -4,7 +4,7 @@
   "authors": [
     "Akshay <aksh.mahajan007@gmail.com>"
   ],
-  "description": "My First Chrome App",
+  "description": "Polymer Chrome App",
   "main": "background.js",
   "license": "MIT",
   "ignore": [
@@ -18,6 +18,7 @@
     "core-elements": "Polymer/core-elements#0.5",
     "paper-elements": "Polymer/paper-elements#0.5",
     "polymer": "Polymer/polymer#0.5",
-    "core-icon": "Polymer/core-icon#0.5"
+    "core-icon": "Polymer/core-icon#0.5",
+    "angular-material": "~0.9.7"
   }
 }

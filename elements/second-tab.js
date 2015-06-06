@@ -12,20 +12,28 @@ Polymer('second-tab',{
   },
   changeColor:function(){
     var hex,red,green,blue;
-    
-    red = this.hr.toString(16);
-    green = this.hg.toString(16);
-    blue = this.hb.toString(16);
-    
-    if(red<16){
+
+    if(this.hr<16){
+        red = this.hr.toString(16);
         red = '0'+ red;
+    }else{
+      red = this.hr.toString(16);
     }
-    if(green<16){
+    
+    if(this.hg<16){
+      green = this.hg.toString(16);
       green = '0'+ green;
+    }else{
+      green = this.hg.toString(16);
     }
-    if(blue<16){
+    
+    if(this.hb<16){
+      blue = this.hb.toString(16);
       blue = '0'+ blue;
+    }else{
+      blue = this.hb.toString(16);
     }
+    
     hex = '#'+ red + green + blue;
     this.$.hexColor.value = hex;//important this.$....
     this.$.box.style.backgroundColor= hex;

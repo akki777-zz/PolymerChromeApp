@@ -1,6 +1,6 @@
 {
   "name": "Polymer Chrome App",
-  "description": "My first Chrome App.",
+  "description": "My First Polymer Chrome App.",
   "version": "0.0.1",
   "manifest_version": 2,
   "app": {
@@ -8,5 +8,5 @@
       "scripts": ["background.js"]
     }
   },
-  "icons": { "16": "chat16.png", "128": "chat128.png" }
+  "icons": { "16": "assets/app16.png", "128": "assets/app128.png" }
 }

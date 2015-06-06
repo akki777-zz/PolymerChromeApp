@@ -1,0 +1,82 @@
+      html,body {
+        height: 100%;
+        margin: 0;
+      }  
+  
+      @font-face {
+          font-family: Handlee;
+          src: url(assets/Handlee-Regular.ttf);
+      }
+
+      core-toolbar {
+        background-color: #0099cc;
+        color: white;
+        font-size: 25px;
+        font-family: 'Handlee', cursive;
+        font-weight: bold;
+      }
+      
+      paper-tabs {
+        color: yellow;
+        font-weight: bold;
+        font-size: 15px;
+      }
+      
+      paper-fab {
+        z-index: 1;         /*always on top*/
+        position: absolute; /*fixed position* at bottom*/ 
+        bottom: 25px;
+        right: 25px;
+        background: #FF6000;
+      }
+      
+      core-icon[icon="social:notifications"] {
+          height: 50px;
+          color: #ee1166;
+      }
+      
+      core-image {
+        top: 5px;
+        width: 60px;
+        height: 60px;
+        border-radius: 30px;
+      }
+      
+      paper-menu-button {
+         position: absolute;
+         right: 10px;
+      }
+      
+      .overflow-menu{
+        color: #555;
+      }
+      
+      .drawer-menu {
+        font-size: 20px;
+        font-family: sans-serif;
+      }
+      
+      .card {
+        width: 65%;
+        height:auto;
+        background-color:white;
+        border-radius: 4px;
+      }
+      .md-card-image { /*coz image does not allow all borders */
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+      
+      #username {
+        position: absolute;
+        top: 75px;
+        left: 10px;
+      }
+     
+     #drawerBack {
+       background-color: #e8e8e8;
+        box-shadow: 0px 0px 4px #888888;
+     }
+     #drawerTool {
+       background: #98bf21;
+     }

@@ -25,9 +25,9 @@ document.getElementById("paper-fab-notify").addEventListener("click", function()
               if (Notification.permission !== "granted")
                 Notification.requestPermission();
             
-              var notification = new Notification('Notification title', {
-                icon: 'chat128.png',
-                body: "Update Unlimited is awesome.",
+              var notification = new Notification('Update Unlimited Blog', {
+                icon: 'assets/app128.png',
+                body: "Check it out !! Click this notification.",
               });
             
             
@@ -36,3 +36,7 @@ document.getElementById("paper-fab-notify").addEventListener("click", function()
               };
 });
 
+//share paper-toast
+document.getElementById('share').addEventListener("click",function(){
+  document.querySelector('#toast').toggle();
+});
